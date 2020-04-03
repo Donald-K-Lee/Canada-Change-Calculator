@@ -14,15 +14,15 @@ dime=0
 nickel=0
 #End
 
-change = float(input("How much change will they recieve?:"))
 def remain():
     global dime
     def conclude():
         global dime
-        if change == 0.04 or change == 0.03:
+        global change
+        if change == 0.04 or change == 0.03: #Since Canada removed pennies, 3 and 4 cents are rounded to a nickel
             global nickel
-            nickel = 2
-            conclude()
+            nickel = nickel+1
+            change=0
             if nickel == 2:
                 dime = dime + 1
                 nickel = 0
@@ -32,11 +32,12 @@ def remain():
         elif dime >= 1:
             print("You owe " + str(dime) + " dime(s)")
             dime=0
+            print(change)
             conclude()
         elif nickel==1:
             print("You owe a nickel")
         else:
-            print("Done")
+            print("Program Finished")
     global change #makes change global, so that when change is decreased, it would remain decreased for the entire program
     change = round(change, 2) #ensures that change isn't irrational
     if change >=100:
@@ -95,4 +96,19 @@ def remain():
         conclude()
     else:
         conclude()
-remain()
+
+#If an Error occurs with the user input Ex) They enter a letter instead of a number
+def Retry():
+    global change
+    try:
+        print("You didn't enter a number or you used this $ symbol! Please try again!")
+        change = float(input("How much change will they recieve?:"))
+        remain()
+    except ValueError:
+        Retry()
+
+try:
+    change = float(input("How much change will they recieve?:"))
+    remain()
+except ValueError:
+    Retry()
