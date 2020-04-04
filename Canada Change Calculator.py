@@ -16,6 +16,7 @@ nickel=0
 
 def remain():
     global dime
+#conclude \/\/\/\/\/\/
     def conclude():
         global dime
         global change
@@ -30,55 +31,79 @@ def remain():
             else:
                 conclude()
         elif dime >= 1:
-            print("You owe " + str(dime) + " dime(s)")
+            if dime>1:
+                print("Give back " + str(int(dime)) + " dimes")
+            else:
+                print("Give back one dime")
             dime=0
-            print(change)
             conclude()
         elif nickel==1:
-            print("You owe a nickel")
+            print("Give back one nickel") #You can only have 1 Nickel, because 2 nickels would turn into 1 dime
         else:
             print("Program Finished")
+    #Conclude Ended
     global change #makes change global, so that when change is decreased, it would remain decreased for the entire program
     change = round(change, 2) #ensures that change isn't irrational
     if change >=100:
         hundred = change //100 #Number of times 100 went into the change
         change = change % 100  # Remainder of the answer
-        print("You owe " + str(hundred) +" 100 dollar bill(s)")
+        if hundred>1:
+            print("Give back " + str(int(hundred)) +" $100 dollar bills")
+        else:
+            print("Give back an a hundred dollar bill")
         remain()
     elif change >=50:
         fifty = change//50
         change= change % 50
-        print("You owe a 50 dollar bill") #You can only owe 1 50 dollar bill, since 2 fifties would make 100
+        print("Give back a $50 dollar bill") #You can only owe 1 50 dollar bill, since 2 fifties would make 100
         remain()
     elif change >=20:
         twenty = change//20
         change= change % 20
-        print("You owe " + str(twenty) + " 20 dollar bill(s)")
+        if twenty>1:
+            print("Give back " + str(int(twenty)) + " $20 dollar bills")
+        else: 
+            print("Give back a twenty dollar bill")
         remain()
     elif change >=10:
         ten = change//10
         change= change % 10
-        print("You owe " + str(ten) + " 10 dollar bill(s)")
+        if ten>1:
+            print("Give back " + str(int(ten)) + " $10 dollar bills")
+        else:
+            print("Give back a ten dollar bill")
         remain()
     elif change >=5:
         five = change//5
         change= change % 5
-        print("You owe " + str(five) + " 5 dollar bill(s)")
+        if five>1:
+            print("Give back " + str(int(five)) + " $5 dollar bills")
+        else:
+            print("Give back a five dollar bill")
         remain()
     elif change >=2:
         toonie = change//2
         change= change % 2
-        print("You owe " + str(toonie) + " toonie(s)")
+        if toonie>1:
+            print("Give back " + str(int(toonie)) + " toonies")
+        else:
+            print("Give back one toonie")
         remain()
     elif change >=1:
         loonie = change//1
         change= change % 1
-        print("You owe " + str(loonie) + " loonie(s)")
+        if loonie>1:
+            print("Give back " + str(int(loonie)) + " loonies")
+        else:
+            print("Give back one loonie")
         remain()
     elif change >=0.25:
         quarter = change//0.25
         change= change % 0.25
-        print("You owe " + str(quarter) + " quarter(s)")
+        if quarter>1:
+            print("Give back " + str(int(quarter)) + " quarters")
+        else:
+            print("Give back one quarter")
         remain()
     elif change >=0.1:
         dime = change//0.1
