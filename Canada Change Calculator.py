@@ -40,6 +40,7 @@ def remain():
         elif nickel==1:
             print("Give back one nickel") #You can only have 1 Nickel, because 2 nickels would turn into 1 dime
         else:
+            print("")  # Starts a new line
             print("Program Finished")
     #Conclude Ended
     global change #makes change global, so that when change is decreased, it would remain decreased for the entire program
@@ -126,14 +127,19 @@ def remain():
 def Retry():
     global change
     try:
+        print("")  # Starts a new line
         print("You didn't enter a number or you used this $ symbol! Please try again!")
         change = float(input("How much change will they recieve?:"))
+        print("")  # Starts a new line
         remain()
     except ValueError:
         Retry()
 
 try:
+    print("")  # Starts a new line
+    print("Do not include the $ symbol")
     change = float(input("How much change will they recieve?:"))
+    print("") #Starts a new line
     remain()
 except ValueError:
     Retry()
