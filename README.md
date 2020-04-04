@@ -10,6 +10,6 @@ Simply subtract the amount the customer gave you with the total cost of their it
 Input the result of your calculation into the change calculator.
 # 3.
 Done! This calculator will then advise you of what and how many bills and or coins to return to the customer.
-# FAQ.
+# FAQ
 If you receive the "Please try again!" error message, don't worry! This means that you've entered a character or symbol.
 Remember to not add the $ symbol, letters, words, or other symbols!
