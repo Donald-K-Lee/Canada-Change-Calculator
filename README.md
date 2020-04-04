@@ -11,5 +11,5 @@ Input the result of your calculation into the change calculator.
 # 3.
 Done! This calculator will then advise you of what and how many bills and or coins to return to the customer.
 # 4. 
-If you received the "Please try again!" error message, don't worry! This means that you've entered a character or symbol.
+If you receive the "Please try again!" error message, don't worry! This means that you've entered a character or symbol.
 Remember to not add the $ symbol, letters, words, or other symbols!
