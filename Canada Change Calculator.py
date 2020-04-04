@@ -137,7 +137,7 @@ def Retry():
 
 try:
     print("")  # Starts a new line
-    print("Do not include the $ symbol")
+    print("Do not include the $ symbol.")
     change = float(input("How much change will they recieve?:"))
     print("") #Starts a new line
     remain()
